@@ -40,7 +40,7 @@ function handler.warp(world,id)
         end
     end
     local stuck = 0
-    while getTile(mfloor(getBot().x / 32),mfloor(getBot().y / 32)).fg == 6 and do
+    while getTile(mfloor(getBot().x / 32),mfloor(getBot().y / 32)).fg == 6 do
         sendPacket(3, "action|join_request\nname|"..world:upper().."|"..id:upper().."\nvintedWorld|0")
         sleep(5000)
         if stuck >= 20 then
